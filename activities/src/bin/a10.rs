@@ -11,5 +11,14 @@
 // * Use a function to print the messages
 // * Use a match expression to determine which message
 //   to print
-
-fn main() {}
+fn print(value: bool) {
+  match value {
+      true => print!("is > 100"),
+      false => print!("is <= 100")
+  }
+}
+fn main() {
+  let number: i32 = 110;
+  let is_gt_100: bool = number > 100;
+  print(is_gt_100);
+}
